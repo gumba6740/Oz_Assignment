@@ -1,307 +1,68 @@
-{\rtf1\ansi\ansicpg949\cocoartf2821
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset129 AppleSDGothicNeo-Regular;\f1\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10440\viewh8800\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+반려동물 호텔 예약시스템 DB 설계
 
-\f0\fs36 \cf0 \'b9\'dd\'b7\'c1\'b5\'bf\'b9\'b0
-\f1  
-\f0 \'c8\'a3\'c5\'da
-\f1  
-\f0 \'bf\'b9\'be\'e0\'bd\'c3\'bd\'ba\'c5\'db
-\f1  DB 
-\f0 \'bc\'b3\'b0\'e8
-\f1 \
-\
+예약 단위 구조 : 1예약 =  1펫 = 1룸 = n서비스
 
-\f0 \'bf\'b9\'be\'e0
-\f1  
-\f0 \'b4\'dc\'c0\'a7
-\f1  
-\f0 \'b1\'b8\'c1\'b6
-\f1  : 1
-\f0 \'bf\'b9\'be\'e0
-\f1  =  1
-\f0 \'c6\'ea
-\f1  = 1
-\f0 \'b7\'eb
-\f1  = n
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba
-\f1 \
-\
-\
 
-\f0 \'b0\'ed\'b0\'b4
-\f1 \
- - 
-\f0 \'b0\'ed\'b0\'b4
-\f1 id \
- - 
-\f0 \'c0\'cc\'b8\'a7
-\f1   \
- - 
-\f0 \'bb\'fd\'b3\'e2\'bf\'f9\'c0\'cf
-\f1   \
- - 
-\f0 \'c0\'fc\'c8\'ad\'b9\'f8\'c8\'a3
-\f1   \
- - 
-\f0 \'c0\'cc\'b8\'de\'c0\'cf
-\f1   # UNIQUE\
- - 
-\f0 \'c1\'d6\'bc\'d2
-\f1  \
- - 
-\f0 \'b0\'a1\'c0\'d4\'c0\'cf
-\f1 \
-\
-\
+고객
+ - 고객id 
+ - 이름  
+ - 생년월일  
+ - 전화번호  
+ - 이메일  # UNIQUE
+ - 주소 
+ - 가입일
 
-\f0 \'c6\'ea
-\f1 \
- - 
-\f0 \'c6\'ea
-\f1 id\
- - 
-\f0 \'b0\'ed\'b0\'b4\'be\'c6\'c0\'cc\'b5\'f0
-\f1  # 
-\f0 \'c2\'fc\'c1\'b6
-\f1 \
- - 
-\f0 \'c1\'be
-\f1   \
- - 
-\f0 \'c7\'b0\'c1\'be
-\f1 \
- - 
-\f0 \'bb\'fd\'b3\'e2
-\f1   \
- - 
-\f0 \'b8\'f6\'b9\'ab\'b0\'d4
-\f1 \
- - 
-\f0 \'ba\'f1\'b0\'ed
-\f1   # TEXT\
-\
 
-\f0 \'b0\'b4\'bd\'c7
-\f1 \
- - 
-\f0 \'b7\'eb\'be\'c6\'c0\'cc\'b5\'f0
-\f1 \
- - 
-\f0 \'b9\'e6\'b9\'f8\'c8\'a3
-\f1   # UNIQUE\
- - 
-\f0 \'c5\'b8\'c0\'d4  
-\f1 \
- - 
-\f0 \'c7\'cf\'b7\'e7
-\f1  
-\f0 \'bc\'f7\'b9\'da
-\f1  
-\f0 \'b0\'a1\'b0\'dd  
-\f1 \
-\
-\
+펫
+ - 펫id
+ - 고객아이디 # 참조
+ - 종  
+ - 품종
+ - 생년  
+ - 몸무게
+ - 비고  # TEXT
 
-\f0 \'bf\'b9\'be\'e0
-\f1 \
- - 
-\f0 \'bf\'b9\'be\'e0
-\f1  
-\f0 \'be\'c6\'c0\'cc\'b5\'f0
-\f1 \
- - 
-\f0 \'c6\'ea
-\f1 id  # 
-\f0 \'c2\'fc\'c1\'b6
-\f1 \
- - 
-\f0 \'b7\'eb
-\f1 id  # 
-\f0 \'c2\'fc\'c1\'b6
-\f1 \
- - 
-\f0 \'c3\'bc\'c5\'a9\'c0\'ce
-\f1 \
- - 
-\f0 \'c3\'bc\'c5\'a9\'be\'c6\'bf\'f4
-\f1 \
- - 
-\f0 \'bc\'f7\'b9\'da\'b0\'e1\'c1\'a6\'b0\'a1\'b0\'dd
-\f1  # 
-\f0 \'bc\'f7\'b9\'da\'c0\'cf
-\f1  * 
-\f0 \'c0\'cf\'c0\'cf
-\f1  
-\f0 \'b0\'a1\'b0\'dd
-\f1 \
- - 
-\f0 \'bb\'f3\'c5\'c2
-\f1   # 
-\f0 \'bf\'b9\'be\'e0\'bd\'c5\'c3\'bb
-\f1 , 
-\f0 \'bf\'b9\'be\'e0\'bf\'cf\'b7\'e1
-\f1 , 
-\f0 \'c5\'f5\'bc\'f7
-\f1  
-\f0 \'c1\'df
-\f1 , 
-\f0 \'c5\'f0\'bd\'c7\'bf\'cf\'b7\'e1
-\f1 , 
-\f0 \'c5\'f0\'bd\'c7
-\f1  
-\f0 \'c1\'f6\'bf\'ac
-\f1 , 
-\f0 \'c3\'eb\'bc\'d2
-\f1 , 
-\f0 \'b3\'eb\'bc\'ee
-\f1 \
-\
-\
-\
+객실
+ - 룸아이디
+ - 방번호  # UNIQUE
+ - 타입  
+ - 하루 숙박 가격  
 
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba
-\f1  
-\f0 \'b8\'de\'b4\'ba
-\f1 \
- - 
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba\'be\'c6\'c0\'cc\'b5\'f0
-\f1 \
- - 
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba\'b8\'ed
-\f1 \
- - 
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba
-\f1  
-\f0 \'bc\'b3\'b8\'ed
-\f1 \
- - 
-\f0 \'c8\'b8\'b4\'e7
-\f1  
-\f0 \'b0\'a1\'b0\'dd
-\f1 \
-\
-\
-\
-# 
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba\'c0\'c7
-\f1  
-\f0 \'b0\'a1\'c1\'fe\'bc\'f6\'b8\'a6
-\f1  
-\f0 \'bf\'a9\'b7\'af\'b0\'b3
-\f1  
-\f0 \'c1\'a4\'c7\'d2
-\f1  
-\f0 \'bc\'f6
-\f1  
-\f0 \'c0\'d6\'b1\'e2
-\f1  
-\f0 \'b6\'a7\'b9\'ae\'bf\'a1
-\f1  
-\f0 \'bf\'b9\'be\'e0
-\f1  
-\f0 \'c5\'d7\'c0\'cc\'ba\'ed\'b0\'fa
-\f1  
-\f0 \'ba\'d0\'b8\'ae\'c7\'d8\'bc\'ad
-\f1  
-\f0 \'b0\'fc\'b8\'ae
-\f1 \
 
-\f0 \'bf\'b9\'be\'e0
-\f1 _
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba
-\f1 \
- - 
-\f0 \'bf\'b9\'be\'e0
-\f1  
-\f0 \'be\'c6\'c0\'cc\'b5\'f0
-\f1  # 
-\f0 \'c2\'fc\'c1\'b6
-\f1 \
- - 
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba
-\f1  
-\f0 \'be\'c6\'c0\'cc\'b5\'f0
-\f1 \
- - 
-\f0 \'c8\'bd\'bc\'f6
-\f1 \
- - 
-\f0 \'b0\'a1\'b0\'dd
-\f1  # 
-\f0 \'b0\'a1\'b0\'dd\'b0\'ed\'c1\'a4\'c0\'bb
-\f1  
-\f0 \'c0\'a7\'c7\'d8
-\f1  
-\f0 \'b1\'e2\'b7\'cf
-\f1 \
-\
-\
-# 
-\f0 \'b0\'ed\'b0\'b4\'be\'c6\'c0\'cc\'b5\'f0\'b8\'a6
-\f1  
-\f0 \'c8\'ae\'c0\'ce\'c7\'cf\'b7\'c1\'b8\'e9
-\f1  3
-\f0 \'b4\'dc\'b0\'e8\'b8\'a6
-\f1  
-\f0 \'b0\'c5\'c3\'c4\'be\'df\'c7\'cf\'b1\'e2
-\f1  
-\f0 \'b6\'a7\'b9\'ae\'bf\'a1
-\f1  
-\f0 \'b0\'ed\'b0\'b4\'be\'c6\'c0\'cc\'b5\'f0\'b8\'a6
-\f1  
-\f0 \'b3\'d6\'c0\'bd
-\f1 \
+예약
+ - 예약 아이디
+ - 펫id  # 참조
+ - 룸id  # 참조
+ - 체크인
+ - 체크아웃
+ - 숙박결제가격 # 숙박일 * 일일 가격
+ - 상태  # 예약신청, 예약완료, 투숙 중, 퇴실완료, 퇴실 지연, 취소, 노쇼
 
-\f0 \'b0\'e1\'c1\'a6
-\f1 \
- - id\
- - 
-\f0 \'b0\'ed\'b0\'b4\'be\'c6\'c0\'cc\'b5\'f0
-\f1 \
- - 
-\f0 \'bf\'b9\'be\'e0
-\f1  
-\f0 \'be\'c6\'c0\'cc\'b5\'f0
-\f1 \
- - 
-\f0 \'b0\'e1\'c1\'a6\'c0\'cf
-\f1 \
- - 
-\f0 \'c3\'d1
-\f1  
-\f0 \'b0\'e1\'c1\'a6\'b1\'dd\'be\'d7
-\f1   # 
-\f0 \'bf\'b9\'be\'e0\'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7
-\f1  
-\f0 \'bc\'f7\'b9\'da\'b0\'e1\'c1\'a6\'b1\'dd\'be\'d7
-\f1  + \
-                         
-\f0 \'bf\'b9\'be\'e0
-\f1 _
-\f0 \'bc\'ad\'ba\'f1\'bd\'ba
-\f1  
-\f0 \'c5\'d7\'c0\'cc\'ba\'ed\'c0\'c7
-\f1  
-\f0 \'c8\'bd\'bc\'f6
-\f1  * 
-\f0 \'b0\'a1\'b0\'dd
-\f1 \
- - 
-\f0 \'b0\'e1\'c1\'a6\'bc\'f6\'b4\'dc
-\f1 \
- - 
-\f0 \'bb\'f3\'c5\'c2
-\f1  # 
-\f0 \'b4\'eb\'b1\'e2
-\f1 , 
-\f0 \'bf\'cf\'b7\'e1
-\f1 , 
-\f0 \'c3\'eb\'bc\'d2
-\f1 , 
-\f0 \'bd\'c7\'c6\'d0
-\f1 , 
-\f0 \'c8\'af\'ba\'d2}
+
+
+서비스 메뉴
+ - 서비스아이디
+ - 서비스명
+ - 서비스 설명
+ - 회당 가격
+
+
+
+# 서비스의 가짓수를 여러개 정할 수 있기 때문에 예약 테이블과 분리해서 관리
+예약_서비스
+ - 예약 아이디 # 참조
+ - 서비스 아이디
+ - 횟수
+ - 가격 # 가격고정을 위해 기록
+
+
+# 고객아이디를 확인하려면 3단계를 거쳐야하기 때문에 고객아이디를 넣음
+결제
+ - id
+ - 고객아이디
+ - 예약 아이디
+ - 결제일
+ - 총 결제금액  # 예약테이블의 숙박결제금액 + 
+                         예약_서비스 테이블의 횟수 * 가격
+ - 결제수단
+ - 상태 # 대기, 완료, 취소, 실패, 환불
