@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사용자 정보 입력받기</title>
+</head>
+<body>
+
+    <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+
+    <script>
+        const nameElement = document.querySelector("#name")
+        let name = prompt("당신의 이름은?")
+        nameElement.textContent = name
+
+        const hobbyy = document.querySelector("#hobby")
+        let hobby = prompt("당신의 취미는?")
+        hobbyy.textContent = hobby
+
+        const songg = document.querySelector("#song")
+        let song = prompt("당신이 좋아하는 노래는?")
+        songg.textContent = song
+    </script>
+</body>
+</html>

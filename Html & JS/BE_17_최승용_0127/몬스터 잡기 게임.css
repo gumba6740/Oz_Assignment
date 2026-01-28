@@ -1,0 +1,36 @@
+#container1{
+        position: relative;
+        width: 600px;
+          left: 50%;
+          transform: translate(-50%);
+      }
+
+      #monster{
+          position: relative;
+          left: 50%;
+          transform: translate(-50%);
+      }
+
+      #HP{
+        width: 600px;
+        height: 30px;
+
+      }
+
+      h1{
+          text-align: center;
+      }
+
+      h2{
+          text-align: center;
+      }
+
+      #masage11{
+          text-align: center;
+      }
+
+      #damage{
+          position: absolute;
+          top: 0%;
+          font-size: 140%;
+      }
