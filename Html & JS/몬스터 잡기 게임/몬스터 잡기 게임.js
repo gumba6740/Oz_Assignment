@@ -5,15 +5,10 @@ let hp = 1000
 /* id를 숫자로 하지 말것 */
 
 //
-function sleep(ms) {
-    return new Promise(resolve => {
-        setTimeout(resolve, ms);
-    });
-}
 
 
-async function battle() {
-    while (hp > 0) {
+const battle = setInterval(() => {
+
         const sword = Math.floor(Math.random() * 21) + 50;
         const axe = Math.floor(Math.random() * 41) + 40;
         const magic = Math.floor(Math.random() * 61) + 30;
@@ -32,7 +27,6 @@ async function battle() {
             dmg += arrow;
         } else {
             alert("올바른 무기를 고르세요");
-            continue;
         }
 
         hp -= dmg;
@@ -43,16 +37,12 @@ async function battle() {
             masage1.textContent = "괴물이 쓰러졌습니다";
             remainingHp.textContent = `남은 체력: ${hp}`;
             pBar.value = hp;
+            clearInterval(battle)
         }
         else {
             remainingHp.textContent = `남은 체력: ${hp}`;
             masage1.textContent = `${dmg}의 데미지를 입혔습니다`;
             pBar.value = hp;
         }
+}, 1500)
 
-        await sleep(1000);
-
-    }
-}
-
-battle();
