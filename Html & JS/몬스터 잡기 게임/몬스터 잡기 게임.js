@@ -2,11 +2,15 @@ const pBar = document.querySelector("#HP");
 const remainingHp = document.querySelector("h2");
 const masage1 = document.querySelector("#masage11");
 let hp = 1000
-/* id를 숫자로 하지 말것 */
-
-//
+/* id를 숫자로 시작하지 말것 */
 
 
+
+/* 무기는 검, 활, 도끼, 마법 총 4종류가 있습니다.
+무기 입력 프롬프트가 랜덤하게 나타난다고 느낄 수 있습니다.
+setInterval은 프롬프트 입력을 기다리지 않고 1.5초가 지나면 다음 작업을 수행합니다.
+따라서, 무기 입력 시간이 1.5초보다 길면 다음 프롬프트는 순식간에 등장하고,
+1.5초보다 짧으면 1.5초가 마저 지나간 이후 프롬프트가 등장합니다.*/
 const battle = setInterval(() => {
 
         const sword = Math.floor(Math.random() * 21) + 50;

@@ -1,6 +1,7 @@
-// 버튼을 누르면 번호 출력
-// n번째 숫자는 머시기
-
+/* 버튼을 누르면 1~45의 숫자가 랜덤하게 출력됩니다.
+중복되는 숫자가 출력될 시, 경고창이 뜨고 해당 숫자를 무효화합니다. 
+최대 6개의 숫자가 출력됩니다. 6개의 숫자가 출력된 상태에서 버튼을 누르면
+숫자의 개수가 1개인 상태로 돌아갑니다. */
 const btn = document.querySelector("#button")
 const numArray = document.querySelector("#numArray")
 let numArray2 = []
