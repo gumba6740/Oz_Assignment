@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입 폼 만들기</title>
+</head>
+<body>
+    <form id="form" action="#">
+        <table>
+            <tr>
+                <th>아이디</th>
+                <td>
+                    <input name="id" type="text" placeholder="아이디">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td>
+                    <input name="password" type="password" placeholder="비밀번호">
+                </td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td>
+                    <input name="password2" type="password" placeholder="비밀번호">
+                </td>
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td>
+                    <input name="name" placeholder="이름">
+                </td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td>
+                    <input name="tel" placeholder="전화번호>">
+                </td>
+            </tr>
+            <tr>
+                <th>이메일</th>
+                <td>
+                    <input name="email" type="email" placeholder="이메일">
+                </td>
+            </tr>
+            <tr>
+                <th>원하는 직무</th>
+                <td>
+                    <select name="position">
+                        <option value="undetermined" selected>미정</option>
+                        <option value="backend">백엔드</option>
+                        <option value="frontend">프론트엔드</option>
+                        <option value="fullstack">풀스택</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>성별</th>
+                <td>
+                    <input id="male" name="gender" type="radio" value="male">남자
+                    <label for="male"></label>
+                    <input id="female" name="gender" type="radio" value="female">여자
+                    <label for="female"></label>
+                </td>
+            </tr>
+            <tr>
+                <th>자기소개</th>
+                <td>
+                    <textarea name="intro"></textarea>
+                </td>
+            </tr>
+        </table>
+        <div class="button">
+            <input name="submit" type="submit" value="가입">
+            <input name="reset" type="reset" value="리셋">
+        </div>
+    </form>
+    <script src="회원가입%20폼%20만들기.js"></script>
+</body>
+</html>
