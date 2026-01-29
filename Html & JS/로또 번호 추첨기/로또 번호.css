@@ -1,0 +1,28 @@
+#container{
+    text-align: center;
+}
+
+#numArray{
+    font-size: 30px;
+}
+
+#notice p{
+    font-size: 25px;
+}
+
+#container2{
+    text-align: center;
+}
+
+#button{
+    width: 150px;
+    height: 60px;
+    border-radius: 15px;
+
+    /* 로또 로고의 색깔*/
+    background-color: rgb(154, 194, 68);
+    border-color: rgb(154, 194, 68);
+    color: rgb(31, 77, 155);
+    font-size: 20px;
+    font-weight: bold;
+}
