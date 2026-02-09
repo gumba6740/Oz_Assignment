@@ -2,6 +2,8 @@ from flask import Flask, render_template
 from flask_smorest import Api
 from db import DATABASE as db
 from models import User, Board
+from routes.board import board_blp
+from routes.users import user_blp
 
 app = Flask(__name__)
 
@@ -22,6 +24,8 @@ app.config["OPENAPI_SWAGGER_UI_PATH"] = "/swagger-ui"
 app.config["OPENAPI_SWAGGER_UI_URL"] = "https://cdn.jsdelivr.net/npm/swagger-ui-dist/"
 
 api = Api(app)
+api.register_blueprint(board_blp)
+api.register_blueprint(user_blp)
 
 
 
